@@ -7,23 +7,31 @@
   font-family: "Work Sans", sans-serif;
 }
 html {
-  color: rgb(96 101 123);
+  color: rgb(37,193,157) !important;
 }
 body{
   /* margin-top: 5%; */
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(255 255 255);
+/* background: linear-gradient(135deg, #1e1e2f, #2b2b42); */
+
+/* background: linear-gradient(135deg, #f5f7fa, #c3cfe2); */
+/* background: linear-gradient(135deg, #e0e0e0, #b0b0b0); */
+background: linear-gradient(135deg, #002f4b, #005f73);
 }
 h2{
-  color: rgb(60, 61, 67) !important;
+  color: rgb(37,193,157);
   text-align: center;
   font-size: 40px;
   letter-spacing: -0.2px;
   font-family: "Merriweather", serif;
 
+}
+li{
+  color: wheat;
 }
 p {
   font-size: 18px;
@@ -48,29 +56,63 @@ p {
 } */
 .heading{
   text-align: center;
+  color: rgb(37,193,157);
+
 }
-.btn-style{
+.btn-style {
   display: flex;
   text-align: center;
   margin-top: 4vh;
+  justify-content: space-evenly;
 }
 button{
-  background: rgb(17 166 131) !important;
+  background: linear-gradient(135deg, #11a683, #25c19d);
+  border: 1px #006950 solid;
+
   cursor: pointer !important;
   padding: 2vh !important;
   margin: auto !important;
   height: 7vh;
-  border: none !important;
+  /* border: none !important; */
   font-size: 18px !important;
   letter-spacing: 1px !important;
   padding: 16px 32px ;
 
 }
+
 button:focus,
 button:hover {
   background: rgb(42, 201, 164) !important;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1) !important;
 }
+.abbr-container {
+  position: relative;
+  display: inline-block;
+  }
+  
+  .abbr-text {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  }
+  
+  .abbr-container:hover .abbr-text {
+  display: block;
+  opacity: 1;
+  }
+  
+  
 
 .card-body{
   max-width: 50rem;
@@ -144,28 +186,41 @@ animation-delay: 0.9s;
     transform: scale(0);
 }
 }
-@media  (max-width:480px){
-  h2{
-    font-size: 28px;
-  }
-  .container{
-    margin: 2% !important;
-  }
-  button{
-    padding: 0.1vh 0.2vh !important;
-    height: 8vh;
-    font-size: 0.9rem !important;
-  }
-  .btn-style{
-    margin: 2vh !important;
-  }
-  .btn-success{
-    width:20vw;
-    height:10vh;
-  }
-  #text{
-    margin-right: 5%;
-    margin-left: 2%;
+@media (max-width: 600px) {
+  h2 {
+  font-size: 1.8rem;
   }
   
-}
+  .container {
+  width: 90%;
+  padding: 12px;
+  }
+  /* .btn-style{
+    width: 90%;
+    padding: 12px;
+  }
+   */
+  button {
+  font-size: 0.85rem;
+  margin: 5px 5px 5px 5px;
+  padding-right: 5px;
+  width: 50%;
+  text-align: center;
+  height: 60%;
+
+  }
+  
+  button span{
+    text-align: center;
+    position: relative;
+    top: -10px;
+    right: 12px;
+  }
+  
+   .abbr-container button span{
+      color: black;
+   }
+  p {
+  font-size: 1rem;
+  }
+  }

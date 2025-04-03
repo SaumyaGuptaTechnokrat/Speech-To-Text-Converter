@@ -66,29 +66,51 @@ function App() {
                 </div>
               </div>
               <div className='btn-style'>
-                <CopyToClipboard text={transcript} onCopy={() => setCopied}>
-                  <button className='btn btn-success' onClick={handleCopied}>
-                    {copied ? <span class="material-symbols-outlined">
-                      done
-                    </span> : <span class="material-symbols-outlined">
-                      content_copy
-                    </span>}
-                  </button>
-                </CopyToClipboard>
-                <button className='btn btn-success' onClick={startListening}><span class="material-symbols-outlined">keyboard_voice</span></button>
-                <button className='btn btn-success' onClick={SpeechRecognition.stopListening}><span class="material-symbols-outlined">
-                  mic_off
-                </span></button>
-                <button className='btn btn-success' onClick={saveNote}><span class="material-symbols-outlined">
-                  note_add
-                </span></button>
-                <button className='btn btn-danger' onClick={clearTranscript}><span class="material-symbols-outlined">
-                  delete
-                </span></button>
-                <Link to="/notes" className='btn btn-success'><span class="material-symbols-outlined">
-                  notes
-                </span></Link>
-              </div>
+  <CopyToClipboard text={transcript} onCopy={() => setCopied}>
+    <div className="abbr-container">
+      <button className='btn btn-success' onClick={handleCopied}>
+        {copied ? <span className="material-symbols-outlined">done</span> : <span className="material-symbols-outlined">content_copy</span>}
+      </button>
+      <span className="abbr-text">Copy</span>
+    </div>
+  </CopyToClipboard>
+
+  <div className="abbr-container">
+    <button className='btn btn-success' onClick={startListening}>
+      <span className="material-symbols-outlined">keyboard_voice</span>
+    </button>
+    <span className="abbr-text">Start Listening</span>
+  </div>
+
+  <div className="abbr-container">
+    <button className='btn btn-success' onClick={SpeechRecognition.stopListening}>
+      <span className="material-symbols-outlined">mic_off</span>
+    </button>
+    <span className="abbr-text">Stop Listening</span>
+  </div>
+
+  <div className="abbr-container">
+    <button className='btn btn-success' onClick={saveNote}>
+      <span className="material-symbols-outlined">note_add</span>
+    </button>
+    <span className="abbr-text">Save Note</span>
+  </div>
+
+  <div className="abbr-container">
+    <button className='btn btn-danger' onClick={clearTranscript}>
+      <span className="material-symbols-outlined">delete</span>
+    </button>
+    <span className="abbr-text">Clear</span>
+  </div>
+
+  <div className="abbr-container notes">
+    <Link to="/notes" className='btn btn-success'>
+      <span className="material-symbols-outlined ">notes</span>
+    </Link>
+    <span className="abbr-text">View Notes</span>
+  </div>
+</div>
+
             </div>
           </div>
         } />
