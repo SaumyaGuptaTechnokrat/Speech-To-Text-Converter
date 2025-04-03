@@ -42,9 +42,10 @@ function App() {
   }
 
   return (
+    <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
+        <Route path="/Speech-To-Text-Converter" element={
           <div className="container-fluid">
             <div className='heading'>
               <h1>Speech To Text Converter</h1>
@@ -94,6 +95,7 @@ function App() {
         <Route path="/notes" element={<Notes notes={notes} />} />
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
