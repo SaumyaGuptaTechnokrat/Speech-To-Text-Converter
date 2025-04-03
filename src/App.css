@@ -1,42 +1,171 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+html {
+  color: rgb(96 101 123);
+}
+body{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255 255 255);
+}
+h2{
+  color: rgb(60, 61, 67) !important;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: -0.2px;
+  font-family: "Merriweather", serif;
+
+}
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* button{
+  background: rgb(17 166 131);
+  color: rgb(255 255 255);
+  border-radius: 6px;
+  padding: 16px 32px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  margin-top: -80px;
+  cursor: pointer;
+} */
+.heading{
   text-align: center;
 }
+.btn-style{
+  display: flex;
+  text-align: center;
+  margin-top: 4vh;
+}
+button{
+  background: rgb(17 166 131) !important;
+  cursor: pointer !important;
+  padding: 2vh !important;
+  margin: auto !important;
+  height: 7vh;
+  border: none !important;
+  font-size: 18px !important;
+  letter-spacing: 1px !important;
+  padding: 16px 32px ;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+button:focus,
+button:hover {
+  background: rgb(42, 201, 164) !important;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-body{
+  max-width: 50rem;
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+  padding: 18px 18px 120px 18px;
+  resize: none;
+  box-shadow: 0 12px 48px 0px rgb(109 117 141 / 20%);
+  background: rgb(255 255 255);
+  border: 0.5px solid rgb(231 233 245);
+  border-radius: 16px;
+}
+.card-body:focus {
+  border: 0.3px solid rgb(43, 45, 56, 0.3);
+  outline: none;
+}
+.transcript{
+  border: none;
+  height: auto;
+  max-width: 50rem;
+  width: 100%;
+}
+.wave-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave{
+width: 0.5vh;
+height: 40px;
+background:linear-gradient(50deg, purple, white);
+margin: 1vh;
+animation: wave 1s infinite linear;
+}
+.wave:nth-child(2){
+animation-delay: 0.1s;
+}
+.wave:nth-child(3){
+animation-delay: 0.2s;
+}
+.wave:nth-child(4){
+animation-delay: 0.3s;
+}
+.wave:nth-child(5){
+animation-delay: 0.4s;
+}
+.wave:nth-child(6){
+animation-delay: 0.5s;
+}
+.wave:nth-child(7){
+animation-delay: 0.6s;
+}
+.wave:nth-child(8){
+animation-delay: 0.7s;
+}
+.wave:nth-child(9){
+animation-delay: 0.8s;
+}
+.wave:nth-child(10){
+animation-delay: 0.9s;
+}
+@keyframes wave {
+0%{
+    transform: scale(0);
+}
+50%{
+    transform: scale(1);
+}
+100%{
+    transform: scale(0);
+}
+}
+@media  (max-width:480px){
+  h2{
+    font-size: 28px;
   }
-  to {
-    transform: rotate(360deg);
+  .container{
+    margin: 2% !important;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  button{
+    padding: 0.1vh 0.2vh !important;
+    height: 8vh;
+    font-size: 0.9rem !important;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .btn-style{
+    margin: 2vh !important;
+  }
+  .btn-success{
+    width:20vw;
+    height:10vh;
+  }
+  #text{
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+  
 }
