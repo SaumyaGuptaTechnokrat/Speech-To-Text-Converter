@@ -4,7 +4,7 @@ import useClipboard from "react-use-clipboard";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useState, useEffect } from 'react';
 import VoiceWaves from './VoiceWaves';
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Notes from './Notes';
 
 function App() {
@@ -43,9 +43,9 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/Speech-To-Text-Converter" element={
+        <Route path="/" element={
           <div className="container-fluid">
             <div className='heading'>
               <h1>Speech To Text Converter</h1>
@@ -116,7 +116,7 @@ function App() {
         } />
         <Route path="/notes" element={<Notes notes={notes} />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
     </>
   );
 }
